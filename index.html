@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tabla.css">
+    <title>Amazing Events - Home</title>
+</head>
+
+<body>
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="Recursos AE/Logos/Logo Amazing Events.png" alt="Amazing Events" width="30" height="24">
+                </a>
+
+                <div class="nav justify-content-end">
+
+                    <a class="button nav-link active" id="Home" aria-current="page">Home</a>
+
+                    <a class="button nav-link active " id="PastEvents" aria-current="page">Past Events</a>
+
+
+                    <a class="button nav-link active " id="UpcomingEvents" aria-current="page">Upcoming
+                        Events</a>
+
+
+                    <a class="button nav-link active " id="Contact" aria-current="page">Contact</a>
+
+
+                    <a class="button nav-link active " id="Stats" aria-current="page">Stats</a>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+<main>
+        <section class="container-xxl">
+            <div class="tittle-contenedor" >
+                <div class="flecha-izq"><i class="fa-solid fa-arrow-left" id="btnLeft"></i></div>
+                <div class="tittle">
+                    
+                    <h1 id="pagina">Amazing Events</h1>
+                </div>
+                <div class="flecha-der"><i class="fa-solid fa-arrow-right" id="btnRight"></i></div>
+            </div>
+            <div class=" bg-secondary check-box" id="containerFiltros">
+                <div class="check" id="check"></div>
+                <div class="icon-buscador">
+                    <input type="text" name="id" id="inputSearch" class="search"
+                        placeholder="What are you looking for?">
+                    <i class="fa-solid lupa fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div id="form"></div>
+            <div class="container-card" id="containerCard"></div>   
+           
+            <div id="stats">
+                <table>
+                    <tr class="color">
+                      <th colspan="3">Estadísticas de Eventos</th>
+                    </tr>
+                    <tr class="titulo">
+                      <th>Evento con Mayor Porcentaje de Asistencia</th>
+                      <th>Evento con Menor Porcentaje de Asistencia</th>
+                      <th>Evento de Mayor Capacidad</th>
+                    </tr>
+                    <tr id="mayoresymenores">
+                      <!-- <td>Metallica en Concierto</td>
+                      <td>Fiesta de Disfraces</td>
+                      <td>Metallica en Concierto</td> -->
+                    </tr>
+                  </table>  
+                  <table id="statsFuturos">
+                    <tr class="color">
+                      <th colspan="3">Estadisticas de Eventos Futuros por Categoría</th>
+                    </tr>
+                    <tr class="titulo">
+                      <th>Categorías</th>
+                      <th>Estimacion de Ingresos</th>
+                      <th>Asistencia Estimada</th>
+                    </tr>
+                    <!-- <tr >
+                      <td>Metallica en Concierto</td>
+                      <td>Concierto de Música</td>
+                      <td>138.000</td>
+                    </tr>
+                    <tr>
+                      <td>Noche de Halloween</td>
+                      <td>Fiesta de Disfraces</td>
+                      <td>9.000</td>
+                    </tr>
+                    <tr>
+                      <td>Avengers</td>
+                      <td>Vamos al Cine</td>
+                      <td>9.000</td>
+                    </tr> -->
+                  </table>  
+                  <table id="statsPasados">
+                    <tr class="color">
+                        <th colspan="3">Estadisticas de Eventos Pasados por Categoría</th>
+                    </tr>
+                    <tr class="titulo">
+                      <th>Categorías</th>
+                      <th>Ingresos</th>
+                      <th>Asistencia</th>
+                    </tr>
+                    <!-- <tr>
+                      <td>10K por la vida</td>
+                      <td>Carrera</td>
+                      <td>25.698</td>
+                    </tr>
+                    <tr>
+                      <td>Feria del libro Escolar</td>
+                      <td>Intercambio de Libros</td>
+                      <td>123.286</td>
+                    </tr>
+                    <tr>
+                      <td>Parque Jurásico</td>
+                      <td>Salida al Museo</td>
+                      <td>65.892</td>
+                    </tr>
+                    <tr>
+                      <td>Fiesta de las Colectividades</td>
+                      <td>Feria de Comida</td>
+                      <td>42.756</td>
+                    </tr> -->
+                  </table>
+            </div>
+             <div id="modalComentario"></div>
+        </section>
+    </main>
+    <footer class="bg-dark">
+        <hr>
+        <ul>
+            <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+            </li>
+            <li><a href="https://www.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+        </ul>
+        <div class="tittle_footer text-light">
+            <h2>Cohort</h2>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+    <!--<script src="./Recursos AE/AmazingEvents.js"></script>-->
+    <script src="stats.js"></script> 
+    <script src="index.js"></script>
+    <script src="form.js"></script>
+   
+</body>
+
+</html>
