@@ -58,8 +58,8 @@ switch (time[1]) {
         document.getElementById("pagina").innerHTML = "Stats"
         break;
 
-    default: imprimir("home")
-    document.getElementById("Home").innerHTML = "Home"
+    default: imprimir("Home")
+    document.getElementById("pagina").innerHTML = "Home"
     break;
 }
 
@@ -121,6 +121,7 @@ function imprimir(id) {
             containerFiltros.style.display = "none"
             stats.style.display = "flex"
             initStats()
+            statsTemple()
             break;
         default:
             arrayAFiltrar = eventos
@@ -218,14 +219,17 @@ function changePage(i) {
             break;
 
 
-        case 4:
+        default:
             stats.style.display = "flex"
             containerCard.style.display = "none"
             containerFiltros.style.display = "none"
             form.style.display = "none"
+            
             document.getElementById("pagina").innerHTML = btn[i]
+             statsTemple()
             initStats()
             break;
+ 
 
     }
 
@@ -266,6 +270,83 @@ function imprimirForm() {
     `
     let form = document.querySelector("form")
     form.addEventListener("submit", function (event) { actionForm(event) })
+}
+
+
+function statsTemple() {
+    document.getElementById("stats").innerHTML = `
+    <table>
+                    <tr class="color">
+                      <th colspan="3">Estadísticas de Eventos</th>
+                    </tr>
+                    <tr class="titulo">
+                      <th>Evento con Mayor Porcentaje de Asistencia</th>
+                      <th>Evento con Menor Porcentaje de Asistencia</th>
+                      <th>Evento de Mayor Capacidad</th>
+                    </tr>
+                    <tr id="mayoresymenores">
+                      <!-- <td>Metallica en Concierto</td>
+                      <td>Fiesta de Disfraces</td>
+                      <td>Metallica en Concierto</td> -->
+                    </tr>
+                  </table>  
+                  <table id="statsFuturos">
+                    <tr class="color">
+                      <th colspan="3">Estadisticas de Eventos Futuros por Categoría</th>
+                    </tr>
+                    <tr class="titulo">
+                      <th>Categorías</th>
+                      <th>Estimacion de Ingresos</th>
+                      <th>Asistencia Estimada</th>
+                    </tr>
+                    <!-- <tr >
+                      <td>Metallica en Concierto</td>
+                      <td>Concierto de Música</td>
+                      <td>138.000</td>
+                    </tr>
+                    <tr>
+                      <td>Noche de Halloween</td>
+                      <td>Fiesta de Disfraces</td>
+                      <td>9.000</td>
+                    </tr>
+                    <tr>
+                      <td>Avengers</td>
+                      <td>Vamos al Cine</td>
+                      <td>9.000</td>
+                    </tr> -->
+                  </table>  
+                  <table id="statsPasados">
+                    <tr class="color">
+                        <th colspan="3">Estadisticas de Eventos Pasados por Categoría</th>
+                    </tr>
+                    <tr class="titulo">
+                      <th>Categorías</th>
+                      <th>Ingresos</th>
+                      <th>Asistencia</th>
+                    </tr>
+                    <!-- <tr>
+                      <td>10K por la vida</td>
+                      <td>Carrera</td>
+                      <td>25.698</td>
+                    </tr>
+                    <tr>
+                      <td>Feria del libro Escolar</td>
+                      <td>Intercambio de Libros</td>
+                      <td>123.286</td>
+                    </tr>
+                    <tr>
+                      <td>Parque Jurásico</td>
+                      <td>Salida al Museo</td>
+                      <td>65.892</td>
+                    </tr>
+                    <tr>
+                      <td>Fiesta de las Colectividades</td>
+                      <td>Feria de Comida</td>
+                      <td>42.756</td>
+                    </tr> -->
+                  </table> 
+    `
+    
 }
 
 // filtrado por input search
